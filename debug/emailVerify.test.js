@@ -19,7 +19,7 @@ test("multiple @", () => {
 });
 
 // typo error / detection
-const getDidYouMean = require("../src/typoError");
+const getDidYouMean = require("../src/typeError");
 test("detect gmial typo", () => {
   const suggestion = getDidYouMean("user@gmial.com");
   expect(suggestion).toBe("user@gmail.com");
