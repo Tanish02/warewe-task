@@ -1,9 +1,12 @@
 const levenshtein = require("fast-levenshtein");
+
 const domains = ["gmail.com", "yahoo.com", "hotmail.com", "outlook.com"];
+
+// typo detection function simple for now
 function getDidYouMean(email) {
-  if (!email.includes("@")) return null;
   const [user, domain] = email.split("@");
   for (let d of domains) {
+    if (domain === d) return null;
     const distance = levenshtein.get(domain, d);
     if (distance <= 2) {
       return `${user}@${d}`;
@@ -11,4 +14,5 @@ function getDidYouMean(email) {
   }
   return null;
 }
+
 module.exports = getDidYouMean;
