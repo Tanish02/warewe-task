@@ -1,0 +1,20 @@
+{
+  "name": "warewe-task",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "fast-levenshtein": "^3.0.0",
+    "nodemailer": "^8.0.5",
+    "smtp-client": "^0.4.0"
+  },
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
