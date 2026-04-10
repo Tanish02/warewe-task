@@ -1,6 +1,6 @@
 const validateEmail = require("./validator");
-const getMXRecords = require("./dnsLookup");
-const checkMailbox = require("./smtpCheck");
+const getRecords = require("./dnsLookup");
+const checkMail = require("./smtpCheck");
 const getDidYouMean = require("./typoError");
 
 async function verifyEmail(email) {
